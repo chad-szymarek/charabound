@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Charabound</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <style>
+      body {
+        background-image: url(<%= asset_path('background/smoke.jpg') %>);
+        background-repeat: repeat;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen m-0 p-0">
+    <main class="">
+      <%= render partial: "partials/navbar" %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

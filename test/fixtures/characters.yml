@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  archetype: MyString
+  species: MyString
+  age: 1
+  eyes: MyString
+  hair: MyString
+  height: MyString
+  weight: 1
+  name: MyString
+  distinguishing_features: MyString
+  xp: 1
+
+two:
+  archetype: MyString
+  species: MyString
+  age: 1
+  eyes: MyString
+  hair: MyString
+  height: MyString
+  weight: 1
+  name: MyString
+  distinguishing_features: MyString
+  xp: 1

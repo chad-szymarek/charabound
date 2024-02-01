@@ -1,0 +1,4 @@
+class Spell < ApplicationRecord
+  # Validates that all the attributes are present
+  validates :name, :dn, :target, :range, :duration, :overcast, :description, :spell_test, presence: true
+end

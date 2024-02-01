@@ -1,0 +1,84 @@
+<%= form_with model: spell do |form| %>
+  <div class="flex place-content-center">
+    <div class="label">
+      <%= form.label :name, class: "label-text" %><br>
+    </div>
+    <%= form.text_field :name, class:"input input-bordered w-full max-w-xs col-start-4 col-span-2" %>
+    <% spell.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="grid grid-cols-8">
+    <div class="col-start-4">
+      <div class="label">
+        <%= form.label :dn, class: "label-text" %>
+      </div>
+      <%= form.text_field :dn, class:"input input-bordered w-full max-w-xs" %>
+      <% spell.errors.full_messages_for(:dn).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="col-start-5">
+      <div class="label">
+        <%= form.label :target, class: "label-text" %>
+      </div>
+      <%= form.text_field :target, class:"input input-bordered w-full max-w-xs" %>
+      <% spell.errors.full_messages_for(:target).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="col-start-4">
+      <div class="label">
+        <%= form.label :range, class: "label-text" %>
+      </div>
+      <%= form.text_field :range, class:"input input-bordered w-full max-w-xs" %>
+      <% spell.errors.full_messages_for(:range).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="col-start-5">
+      <div class="label">
+        <%= form.label :duration, class: "label-text" %>
+      </div>
+      <%= form.text_field :duration, class:"input input-bordered w-full max-w-xs" %>
+      <% spell.errors.full_messages_for(:duration).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="grid col-start-4 col-span-2">
+      <div class="label">
+        <%= form.label :overcast, class: "label-text" %>
+      </div>
+      <%= form.text_field :overcast, class:"input input-bordered w-full" %>
+      <% spell.errors.full_messages_for(:overcast).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="grid col-start-4 col-span-2">
+      <div class="label">
+        <%= form.label :spell_test, class: "label-text" %>
+      </div>
+      <%= form.text_field :spell_test, rows: 5, class:"input input-bordered w-full" %>
+      <% spell.errors.full_messages_for(:spell_text).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="grid col-start-4 col-span-2">
+      <div class="label">
+        <%= form.label :description, class: "label-text" %>
+      </div>
+      <%= form.text_area :description, rows: 4, class:"w-full textarea" %>
+      <% spell.errors.full_messages_for(:description).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+
+<% end %>

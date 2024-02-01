@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dn: MyString
+  target: MyString
+  range: MyString
+  duration: MyString
+  overcast: MyString
+  description: MyText
+
+two:
+  name: MyString
+  dn: MyString
+  target: MyString
+  range: MyString
+  duration: MyString
+  overcast: MyString
+  description: MyText

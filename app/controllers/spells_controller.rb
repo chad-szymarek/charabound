@@ -1,7 +1,5 @@
 # The SpellsController class is responsible for handling requests related to spells.
 class SpellsController < ApplicationController
-  before_action :authenticate_user!
-
   # Retrieves all spells and assigns them to the @spells instance variable.
   def index
     @spells = Spell.all

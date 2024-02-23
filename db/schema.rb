@@ -10,18 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_30_104602) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_23_024647) do
   create_table "characters", force: :cascade do |t|
+    t.integer "body"
+    t.integer "mind"
+    t.integer "soul"
+    t.integer "wounds"
     t.string "archetype"
     t.string "species"
-    t.integer "age"
-    t.string "eyes"
-    t.string "hair"
-    t.string "height"
-    t.integer "weight"
-    t.string "name"
-    t.string "distinguishing_features"
-    t.integer "xp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +33,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_104602) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "spell_test"
+    t.integer "character_id"
+    t.index ["character_id"], name: "index_spells_on_character_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,4 +49,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_104602) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "spells", "characters"
 end
